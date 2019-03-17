@@ -10,9 +10,3 @@ outport = mido.open_output(outports[index[0]])
 
 for msg in MidiFile(filePath).play():
     outport.send(msg)
-
-
-# with mido.open_input() as inport:
-#     print('Inport = ' + inport.name)
-#     for msg in inport:
-#         print(msg)
