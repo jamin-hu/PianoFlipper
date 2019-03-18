@@ -1,4 +1,4 @@
-# PianoFlipperGitHub
+# PianoFlipper
 
 ### Project Goal
 
