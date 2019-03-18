@@ -2,11 +2,15 @@ import mido
 from mido import Message
 from mido import MidiFile
 
-filePath = 'MidiRecordings/Chopin/chpn_op10_e12.mid'
-
 outports = mido.get_output_names()
-index = [i for i, s in enumerate(outports) if 'VirtualMidiPort1' in s]
-outport = mido.open_output(outports[index[0]])
+outIndex = [i for i, s in enumerate(outports) if 'VirtualMidiOut' in s]
+outport = mido.open_output(outports[outIndex[0]])
+print("Outport = " + str(outport.name))
 
-for msg in MidiFile(filePath).play():
-    outport.send(msg)
+inports = mido.get_input_names()
+inIndex = [j for j, t in enumerate(inports) if 'VirtualMidiIn' in t]
+
+with mido.open_input(inports[inIndex[0]]) as inport:
+    print("Inport = " + str(inport.name))
+    for msg in inport:
+        outport.send(msg)
