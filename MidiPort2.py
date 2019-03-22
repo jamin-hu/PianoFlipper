@@ -2,19 +2,15 @@ import mido
 from mido import Message
 from mido import MidiFile
 
+
 import _thread, time
-import threading
 
-def input_thread(L, flipped):
-    derp = input()
-    if flipped == True:
-        print("Flipping mode deactivated")
-    elif flipped == False:
-        print("Flipping mode activated")
-    L.append(derp)
-
-
-def do_print():
+def input_thread(flipped):
+    try:
+        inport.close()
+        outport.close()
+    except:
+        pass
 
     outports = mido.get_output_names()
     outIndex = [i for i, s in enumerate(outports) if 'VirtualMidiOut' in s] #Name of virtual MIDI output cable
@@ -25,22 +21,8 @@ def do_print():
     inIndex = [j for j, t in enumerate(inports) if 'VirtualMidiIn' in t] #Name of MIDI input cable
 
     with mido.open_input(inports[inIndex[0]]) as inport:
-        L = []
-        flipped = False
-        _thread.start_new_thread(input_thread, (L, flipped,))
-        #print(_thread.get_ident())
-
         print("Inport = " + str(inport.name))
         for msg in inport:
-
-            if L:
-                del(L[0])
-                if flipped == True:
-                    flipped = False
-                elif flipped == False:
-                    flipped = True
-                _thread.start_new_thread(input_thread, (L,flipped,))
-
             if flipped == True:
                 try:
                     note= msg.note
@@ -49,8 +31,28 @@ def do_print():
                     outport.send(flippedMsg)
                 except:
                     pass
-
-            if flipped == False:
+            elif flipped == False:
                 print(msg)
                 outport.send(msg)
+
+def do_print():
+
+    flipped = False
+    _thread.start_new_thread(input_thread, (flipped,))
+    while True:
+        derp = input()
+        if flipped == False:
+            flipped = True
+        elif flipped == True:
+            flipped = False
+        _thread.exit()
+        _thread.start_new_thread(input_thread, (flipped,))
+
+    # while True:
+    #     print('hi mom')
+    #     time.sleep(.1)
+    #     if L:
+    #         print(L[0])
+    #         del(L[0])
+    #         break
 do_print()
