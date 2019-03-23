@@ -16,7 +16,7 @@ outport = mido.open_output(outports[outIndex[0]])
 print("Outport = " + str(outport.name))
 
 inports = mido.get_input_names()
-inIndex = [j for j, t in enumerate(inports) if 'Ploytec MIDI Cable' in t] #Name of MIDI input cable
+inIndex = [j for j, t in enumerate(inports) if 'VirtualMidiIn' in t] #Name of MIDI input cable
 
 def on_press(key):
     global active
