@@ -8,16 +8,20 @@ import time
 import sys
 
 active = True
+quitScript = False
 
 def on_press(key):
     global active
-    print(key.char)
-    if active == True:
-        print("Normal")
-        active = False
-    elif active == False:
-        print("FLIPPED!")
-        active = True
+    global quitScript
+    if key.char == "q":
+        quitScript = True
+    else:
+        if active == True:
+            print("Normal")
+            active = False
+        elif active == False:
+            print("FLIPPED!")
+            active = True
 
 listener = keyboard.Listener(on_press=on_press)
 listener.start()
@@ -32,7 +36,10 @@ inIndex = [j for j, t in enumerate(inports) if 'VirtualMidiIn' in t] #Name of MI
 
 with mido.open_input(inports[inIndex[0]]) as inport:
     print("Inport = " + str(inport.name))
+
     for msg in inport:
+        if quitScript == True:
+            quit()
         if active == True:
             try:
                 note= msg.note
