@@ -21,8 +21,11 @@ inIndex = [j for j, t in enumerate(inports) if 'Ploytec MIDI Cable' in t] #Name 
 def on_press(key):
     global active
     global quitScript
-    if key.char == "q":
-        quitScript = True
+    try:
+        if key.char == "q":
+            quitScript = True
+    except:
+        pass
     else:
         if active == True:
             print("Normal")
@@ -47,7 +50,8 @@ with mido.open_input(inports[inIndex[0]]) as inport:
                 print(flippedMsg)
                 outport.send(flippedMsg)
             except:
-                pass
+                print(msg)
+                outport.send(msg)
         else:
-            print(msg)
-            outport.send(msg)
+                print(msg)
+                outport.send(msg)
