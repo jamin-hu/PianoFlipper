@@ -46,7 +46,7 @@ with mido.open_input(inports[inIndex[0]]) as inport:
         if active == True:
             try:
                 note= msg.note
-                flippedMsg = msg.copy(note=127-note)
+                flippedMsg = msg.copy(note=124-note)
                 print(flippedMsg)
                 outport.send(flippedMsg)
             except:
