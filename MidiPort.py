@@ -46,7 +46,6 @@ with mido.open_input(inports[inIndex[0]]) as inport:
         if active == True:
             try:
                 note= msg.note
-                #124 centers the mirroring around middle D
                 flippedMsg = msg.copy(note=124-note)
                 print(flippedMsg)
                 outport.send(flippedMsg)
