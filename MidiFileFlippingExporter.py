@@ -3,7 +3,7 @@ from mido import Message
 from mido import MidiFile
 import os
 
-filePath = 'MidiRecordings/Chopin/chpn_op10_e12.mid'
+filePath = 'MidiRecordings/Chopin/CelloEtude.mid'
 
 mid = MidiFile(filePath)
 
@@ -12,7 +12,7 @@ for i, track in enumerate(mid.tracks):
     for msg in track:
         if msg.type == "note_on" or msg.type == "note_off" or msg.type == "polytouch":
             print("Original note = " + str(msg.note))
-            msg.note = 127-msg.note
+            msg.note = 136-msg.note
             #The messages here being modified are still attached to their
             #parent midi file somehow
             print("Flipped note = " + str(msg.note))

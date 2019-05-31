@@ -46,8 +46,8 @@ with mido.open_input(inports[inIndex[0]]) as inport:
         if active == True:
             try:
                 note= msg.note
-                #127 means flipping which includes all notes
-                flippedMsg = msg.copy(note=127-note)
+                #124 means mirroring occurs across middle D
+                flippedMsg = msg.copy(note=124-note)
                 print(flippedMsg)
                 outport.send(flippedMsg)
             except:

@@ -1,0 +1,99 @@
+[File]
+Version=1730
+Split tracks=-1
+Rearrange split tracks=1
+
+[Arrangement]
+Num Audio Tracks=0
+Num Layer Tracks=0
+Midi file=C:\Users\Jamin\PythonVenvs\PianoFlipper\MidiRecordings\Chopin\chpn_op23.mid
+Play Tracks=,1,1,1,0,0,0,0,0
+Active Tracks=,1,1,1,1,1,1,1,1
+MidiChnl to VSTBus=0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+Track 1 LockPresetLive=0
+Track 1 Sf2 Prog=C:\Users\Jamin\PythonVenvs\PianoFlipper\Soundfonts\akai_steinway.sf2>0:0
+Track 1 extras=127,0,0,0,0,1,-1,255,0,
+Track 1 Ignore Bank Numbers=0
+Track 2 LockPresetLive=0
+Track 2 Sf2 Prog=C:\Users\Jamin\PythonVenvs\PianoFlipper\Soundfonts\akai_steinway.sf2>0:0
+Track 2 extras=127,0,0,0,0,1,-1,255,0,
+Track 2 Ignore Bank Numbers=0
+Track 3 LockPresetLive=0
+Track 3 Sf2 Prog=C:\Users\Jamin\PythonVenvs\PianoFlipper\Soundfonts\akai_steinway.sf2>0:0
+Track 3 extras=127,0,0,0,0,1,-1,255,0,
+Track 3 Ignore Bank Numbers=0
+Track 4 LockPresetLive=0
+Track 4 Sf2 Prog=C:\Users\Jamin\PythonVenvs\PianoFlipper\Soundfonts\akai_steinway.sf2>0:0
+Track 4 extras=127,0,0,0,0,1,-1,255,0,
+Track 4 Ignore Bank Numbers=0
+Track 5 LockPresetLive=0
+Track 5 Sf2 Prog=C:\Users\Jamin\PythonVenvs\PianoFlipper\Soundfonts\akai_steinway.sf2>0:0
+Track 5 extras=127,0,0,0,0,1,-1,255,0,
+Track 5 Ignore Bank Numbers=0
+Track 6 LockPresetLive=0
+Track 6 Sf2 Prog=C:\Users\Jamin\PythonVenvs\PianoFlipper\Soundfonts\akai_steinway.sf2>0:0
+Track 6 extras=127,0,0,0,0,1,-1,255,0,
+Track 6 Ignore Bank Numbers=0
+Track 7 LockPresetLive=0
+Track 7 Sf2 Prog=C:\Users\Jamin\PythonVenvs\PianoFlipper\Soundfonts\akai_steinway.sf2>0:0
+Track 7 extras=127,0,0,0,0,1,-1,255,0,
+Track 7 Ignore Bank Numbers=0
+Track 8 LockPresetLive=0
+Track 8 Sf2 Prog=C:\Users\Jamin\PythonVenvs\PianoFlipper\Soundfonts\akai_steinway.sf2>0:0
+Track 8 extras=127,0,0,0,0,1,-1,255,0,
+Track 8 Ignore Bank Numbers=0
+Left Volume=100
+Right Volume=100
+Mixer state=0
+Tuning scale=Equal Temperament
+Tuning root key=0
+BMP factor=1065353216
+Final decay time=2
+Selected track=2
+
+[Track names]
+1=Chopin Ballade in G minor Opus 32
+2=Piano right
+3=Piano left
+4=Chopin: Ballade in G minor Op. 32
+5=Copyright © 2003 by Bernd Krueger
+6=http://www.piano-midi.de
+7=Edition: 2014-02-15
+8=Spur 7
+
+[Pan spread]
+Track 1=0,100,100,0
+Track 2=0,100,100,0
+Track 3=0,100,100,0
+Track 4=0,100,100,0
+Track 5=0,100,100,0
+Track 6=0,100,100,0
+Track 7=0,100,100,0
+Track 8=0,100,100,0
+
+[Pitch Shifting Method]
+Track2=0
+Track3=0
+
+[VST Effects]
+Bypass all=0
+
+[Pianoroll]
+Melodic scale=Natural major
+Key signature=0
+Horizontal position=0
+Vertical position=150
+
+[Pianoroll Markers]
+Start at=Start
+Stop at=End
+
+[Play region]
+Use markers=1
+Start at=1,1
+Stop at=292,3
+Loop=0
+Loop count=0
+Loop continue=1
+Loop start pos=1
+
