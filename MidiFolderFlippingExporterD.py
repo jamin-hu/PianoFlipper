@@ -17,7 +17,7 @@ for fileName in os.listdir(directoryPath):
             for msg in track:
                 if msg.type == "note_on" or msg.type == "note_off" or msg.type == "polytouch":
                     print("Original note = " + str(msg.note))
-                    msg.note = 124-msg.note
+                    msg.note = 124-msg.note #Flipped from D
                     #The messages here being modified are still attached to their
                     #parent midi file somehow
                     print("Flipped note = " + str(msg.note))

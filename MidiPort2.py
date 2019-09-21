@@ -11,12 +11,15 @@ active = True
 quitScript = False
 
 outports = mido.get_output_names()
-outIndex = [i for i, s in enumerate(outports) if 'VirtualMidiOut' in s] #Name of virtual MIDI output cable
+print(outports)
+outIndex = [i for i, s in enumerate(outports) if 'MIDISPORT' in s] #Name of virtual MIDI output cable
 outport = mido.open_output(outports[outIndex[0]])
 print("Outport = " + str(outport.name))
 
+
 inports = mido.get_input_names()
-inIndex = [j for j, t in enumerate(inports) if 'Ploytec MIDI Cable' in t] #Name of MIDI input cable
+print(inports)
+inIndex = [j for j, t in enumerate(inports) if 'MIDISPORT' in t] #Name of MIDI input cable
 
 def on_press(key):
     global active

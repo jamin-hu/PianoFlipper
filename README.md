@@ -1,10 +1,12 @@
 # PianoFlipper
 
-### Project Goal
-
 What if you inverted the entire piano keyboard?
 
-### Tools:
+## Key scripts:
+- Flipping an entire folder of midi recordings
+- Flipping a midi keyboard in real time
+
+## Dependencies:
 - Mido (Python package for MIDI manipulation)
 - Qsynth (MIDI playback GUI)
 - Soundfonts https://www.polyphone-soundfonts.com/en/soundfonts/keyboards/pianos/page-2
